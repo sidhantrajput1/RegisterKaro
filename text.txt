@@ -1,0 +1,12 @@
+import bgSetImage from "./../assets/img/bg.png";
+
+
+<div className="relative min-h-screen bg-gradient-to-l from-blue-100 flex justify-end via-indigo-100 to-orange-100">
+      <div
+        className=" absolute  inset-y-6 inset-x-1.5 w-16 rounded-full rotate-45 bg-gradient-to-b from-red-300 max-h-auto scale-y-100"
+        aria-hidden="true"
+      ></div>
+      <div className=" bg-cover mt-48 mr-20 z-[-100]">
+        <img src={bgSetImage} alt="" />
+      </div>
+    </div> 
