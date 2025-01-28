@@ -1,3 +1,4 @@
+import CompanyService from "./CompanyService"
 import { HeroPage } from "./HeroPage"
 import { NavBar } from "./Shared/NavBar"
 
@@ -6,6 +7,7 @@ function HomePage() {
         <div>
             <NavBar />
             <HeroPage />
+            <CompanyService />
         </div>
     )
 }

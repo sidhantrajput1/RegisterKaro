@@ -61,7 +61,7 @@ export const NavBar = () => {
                 <li className="relative">
                   <button
                     onMouseEnter={toggleDropDown}
-                    onMouseLeave={() => setIsDropdownOpen(false)}
+                    // onMouseLeave={() => setIsDropdownOpen(!isDropdownOpen)}
                     className="flex items-center space-x-1 hover:text-gray-900 cursor-pointer rounded-md transition"
                   >
                     <span>Our Service</span>
@@ -82,7 +82,7 @@ export const NavBar = () => {
                   </button>
   
                   {isDropdownOpen && (
-                    <ul className="absolute mt-3 bg-white border-gray-200 shadow-lg rounded-lg w-[250px]">
+                    <ul className=" border absolute mt-3 bg-white border-gray-200 shadow-lg rounded-lg w-[250px]" onMouseLeave={toggleDropDown}>
                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Mobile App Development</li>
                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Web App Development</li>
                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Product Design</li>
