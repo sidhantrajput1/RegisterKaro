@@ -12,8 +12,6 @@ import { FaHamburger } from "react-icons/fa";
 import { useState } from "react";
 
 
-
-
 export const NavBar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isShowSearch, setIsShowSearch] = useState(false);

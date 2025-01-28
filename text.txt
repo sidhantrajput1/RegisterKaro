@@ -10,3 +10,8 @@ import bgSetImage from "./../assets/img/bg.png";
         <img src={bgSetImage} alt="" />
       </div>
     </div> 
+
+
+    {/* <div className="bg-[url('/bgSet.png')] bg-cover bg-center min-h-screen">
+            <h3>hello</h3>
+        </div> */}
