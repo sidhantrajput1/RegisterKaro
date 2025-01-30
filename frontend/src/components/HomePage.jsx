@@ -1,4 +1,5 @@
 import About from "./About"
+import Company from "./Company"
 import CompanyService from "./CompanyService"
 import { HeroPage } from "./HeroPage"
 import OurService from "./OurService"
@@ -15,6 +16,7 @@ function HomePage() {
             <OurService />
             <About />
             <VideoIntroduction />
+            <Company />
             <Footer />
         </div>
     )
