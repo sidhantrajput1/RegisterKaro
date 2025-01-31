@@ -5,6 +5,7 @@ import { HeroPage } from "./HeroPage"
 import OurService from "./OurService"
 import Footer from "./Shared/Footer"
 import { NavBar } from "./Shared/NavBar"
+import SubscribeBox from "./SubscribeBox"
 import VideoIntroduction from "./VideoIntroduction"
 
 function HomePage() {
@@ -16,6 +17,7 @@ function HomePage() {
             <OurService />
             <About />
             <VideoIntroduction />
+            <SubscribeBox />
             <Company />
             <Footer />
         </div>
