@@ -1,6 +1,7 @@
 import About from "./About"
 import Company from "./Company"
 import CompanyService from "./CompanyService"
+import Connection from "./Connection"
 import { HeroPage } from "./HeroPage"
 import OurService from "./OurService"
 import Footer from "./Shared/Footer"
@@ -17,6 +18,7 @@ function HomePage() {
             <OurService />
             <About />
             <VideoIntroduction />
+            <Connection />
             <SubscribeBox />
             <Company />
             <Footer />
