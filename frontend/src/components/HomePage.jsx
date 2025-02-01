@@ -12,6 +12,7 @@ import { NavBar } from "./Shared/NavBar"
 import SubscribeBox from "./SubscribeBox"
 import VideoIntroduction from "./VideoIntroduction"
 import Accordian from "./Accordian"
+import Corousel from "./Corousel"
 
 function HomePage() {
     return (
@@ -24,6 +25,7 @@ function HomePage() {
             <VideoIntroduction />
             <Application />
             {/* <DigitalTransformation /> */}
+            <Corousel />
             <Accordian/>
             <ManageApp />
             <Connection />

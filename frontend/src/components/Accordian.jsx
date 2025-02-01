@@ -53,7 +53,7 @@ function DropDown({ question, answer }) {
         <div className="pl-4">
           <div className="flex justify-between">
             <span className="text-lg font-medium">{question}</span>
-            <span className="font-bold text-lg">{isActive ? "–" : "+"}</span>
+            <span className="font-bold text-lg cursor-pointer">{isActive ? "–" : "+"}</span>
           </div>
           {isActive && <div className="mt-4">{answer}</div>}
         </div>
