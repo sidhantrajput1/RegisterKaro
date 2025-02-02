@@ -3,7 +3,7 @@ import Application from "./Application"
 import Company from "./Company"
 import CompanyService from "./CompanyService"
 import Connection from "./Connection"
-// import DigitalTransformation from "./DigitalTransformation"
+import DigitalTransformation from "./DigitalTransformation"
 import { HeroPage } from "./HeroPage"
 import ManageApp from "./ManageApp"
 import OurService from "./OurService"
@@ -25,7 +25,7 @@ function HomePage() {
             <About />
             <VideoIntroduction />
             <Application />
-            {/* <DigitalTransformation /> */}
+            <DigitalTransformation />
             {/* <Corousel /> */}
             <Accordian/>
             <ManageApp />
