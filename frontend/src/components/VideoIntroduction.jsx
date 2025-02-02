@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import YouTube from "./../assets/img/youtube.png";
 import { FcIdea } from "react-icons/fc";
 
