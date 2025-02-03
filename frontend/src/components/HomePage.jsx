@@ -12,7 +12,8 @@ import { NavBar } from "./Shared/NavBar"
 import SubscribeBox from "./SubscribeBox"
 import VideoIntroduction from "./VideoIntroduction"
 import Accordian from "./Accordian"
-import Carousel from "./Carousel"
+import HappyClients from "./HappyClients"
+// import Carousel from "./Carousel"
 // import Corousel from "./Corousel"
 
 function HomePage() {
@@ -24,6 +25,7 @@ function HomePage() {
             <OurService />
             <About />
             <VideoIntroduction />
+            <HappyClients />
             <Application />
             <DigitalTransformation />
             {/* <Corousel /> */}
@@ -34,7 +36,7 @@ function HomePage() {
             <Company />
             <Footer />
 
-            <Carousel/>
+            {/* <Carousel/> */}
         </div>
     )
 }
