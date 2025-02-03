@@ -17,7 +17,7 @@ function IdeaCard({ title, description }) {
 function VideoIntroduction() {
   return (
     <div className="bg-[#1c4670]">
-      <div className="flex items-center justify-between max-w-7xl mx-auto p-4">
+      <div className="flex items-center justify-between max-w-7xl mx-auto py-6">
         {/* Left Section: Text content */}
         <div className="text-white flex flex-col gap-10">
           <div className="flex flex-col gap-3">
