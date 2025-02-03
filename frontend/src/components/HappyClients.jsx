@@ -41,11 +41,14 @@ function FloatingLogos() {
 
   return (
     <div className="bg-[#FFFFFF] py-10">
-        <div className="flex flex-col items-center gap-4">
-            <h3 className="text-[#272D37] text-3xl font-bold">Our Happy Clints</h3>
-            <p className="text-[#666666] w-[800px] text-center">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-        </div>
-      <div className="relative w-full  overflow-hidden h-[353px]">
+      <div className="flex flex-col items-center gap-4">
+        <h3 className="text-[#272D37] text-3xl font-bold">Our Happy Clients</h3>
+        <p className="text-[#666666] w-full sm:w-[800px] text-center px-4">
+          Professionally cultivate one-to-one customer service with robust ideas.
+          Dynamically innovate resource-leveling customer service for state of the art customer service.
+        </p>
+      </div>
+      <div className="relative w-full h-[300px] sm:h-[353px] overflow-hidden">
         {logos.map((logo, index) => (
           <div
             key={index}
@@ -58,7 +61,7 @@ function FloatingLogos() {
             <img
               src={logo}
               alt={`Logo ${index}`}
-              className="w-16 h-16 object-contain"
+              className="w-12 h-12 object-contain sm:w-16 sm:h-16 md:w-20 md:h-20" // Adjust size for mobile and larger screens
             />
           </div>
         ))}

@@ -3,9 +3,9 @@ import { FaWpforms } from "react-icons/fa";
 import { MdPayments, MdOutlineCreditScore } from "react-icons/md";
 
 const Step = ({ icon, bgColor, text }) => (
-  <div className="flex gap-4 items-center">
+  <div className="flex gap-4 items-center flex-col sm:flex-row">
     <span className={`p-3 ${bgColor} rounded-full`}>{icon}</span>
-    <h3 className="text-[#3c2109] font-medium text-xl">{text}</h3>
+    <h3 className="text-[#3c2109] font-medium text-xl text-center sm:text-left">{text}</h3>
   </div>
 );
 
@@ -13,7 +13,7 @@ function Application() {
   return (
     <div className="bg-[#FFA229]">
       <div className="py-16 max-w-7xl mx-auto">
-        <div className="flex gap-8 items-center justify-center">
+        <div className="flex gap-8 items-center justify-center flex-wrap">
           {/* Reuse Step component for each step */}
           <Step icon={<FaWpforms className="text-2xl text-white" />} bgColor="bg-[#EB5757]" text="Fill up Application Form" />
           <Step icon={<MdOutlineCreditScore className="text-2xl text-white" />} bgColor="bg-[#27AE60]" text="Check Your Credit Score" />

@@ -4,11 +4,11 @@ import { FcIdea } from "react-icons/fc";
 
 function IdeaCard({ title, description }) {
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 pb-5 items-center">
       <FcIdea className="text-5xl bg-gray-400 p-1/5 rounded-full" />
       <div>
         <h3 className="font-bold text-xl">{title}</h3>
-        <p className="text-[#AAB5CD] w-[400px] text-sm">{description}</p>
+        <p className="text-[#AAB5CD] w-full sm:w-[400px] text-sm">{description}</p>
       </div>
     </div>
   );
@@ -17,12 +17,12 @@ function IdeaCard({ title, description }) {
 function VideoIntroduction() {
   return (
     <div className="bg-[#1c4670]">
-      <div className="flex items-center justify-between max-w-7xl mx-auto py-6">
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-6 p-3">
         {/* Left Section: Text content */}
-        <div className="text-white flex flex-col gap-10">
+        <div className="text-white flex flex-col gap-10 w-full md:w-[45%]">
           <div className="flex flex-col gap-3">
             <h3 className="text-3xl font-bold">Our Video Introductions</h3>
-            <p className="text-[#AAB5CD] w-[500px] text-md">
+            <p className="text-[#AAB5CD] sm:w-[500px] text-md">
               Velit purus egestas tellus phasellus. Mattis eget sed faucibus
               magna vulputate pellentesque a diam tincidunt apis dui.
             </p>
@@ -42,9 +42,9 @@ function VideoIntroduction() {
         </div>
 
         {/* Right Section: Video thumbnail with overlay */}
-        <div className="relative">
+        <div className="relative  w-full md:w-[45%]">
           <img
-            className="rounded-xl w-[640px] h-[420px] object-cover"
+            className="rounded-xl w-full h-[420px] object-cover"
             src="https://img.freepik.com/free-photo/lifestyle-beautiful-asian-business-young-woman-using-laptop-computer-office-desk_1150-15527.jpg"
             alt="Video Thumbnail"
           />

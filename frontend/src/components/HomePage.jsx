@@ -18,7 +18,7 @@ import HappyClients from "./HappyClients"
 
 function HomePage() {
     return (
-        <div>
+        <div className="">
             <NavBar />
             <HeroPage />
             <CompanyService />

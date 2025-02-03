@@ -4,11 +4,11 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 // ServiceCard Component for Reusability
 const ServiceCard = ({ icon, title, description }) => (
-  <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow">
-    <div className="w-14 h-14 text-orange-500 mb-4">{icon}</div>
+  <div className="flex flex-col items-center p-6 hover:bg-white">
+    <div className="text-4xl text-orange-500 mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
     <p className="text-center text-gray-600 mb-4">{description}</p>
-    <p className="text-blue-600 flex items-center gap-1 cursor-pointer hover:text-blue-800">
+    <p className="text-blue-600 flex items-center pt-4 gap-1 cursor-pointer hover:text-blue-800">
       Learn more <IoIosArrowRoundForward />
     </p>
   </div>
@@ -50,18 +50,17 @@ function OurService() {
   ];
 
   return (
-    <div className="bg-gray-100 mt-5">
-      <div className="p-10 max-w-7xl mx-auto">
-        {/* Header Section */}
+    <div className="bg-[#fafafa] mt-5">
+      <div className="py-7 max-w-7xl mx-auto">
+
         <div className="text-center mb-10">
-          <p className="text-orange-500 text-lg font-semibold">
+          <p className="text-orange-500 text-sm font-medium">
             WELCOME TO REGISTERKARO.IN
           </p>
-          <h3 className="text-3xl font-bold text-gray-800">Explore Our Services</h3>
+          <h3 className="text-3xl pt-4 font-bold text-gray-800">Explore Our Services</h3>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

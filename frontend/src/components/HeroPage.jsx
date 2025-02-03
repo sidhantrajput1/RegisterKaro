@@ -7,9 +7,9 @@ import { LuYoutube } from "react-icons/lu";
 export const HeroPage = () => {
   return (
     <div className="bg-[url('/bgSet.png')] bg-cover bg-center h-[600px]">
-      <div className="flex justify-between ">
+      <div className="flex flex-col md:flex-row justify-between px-6 md:px-24">
         {/* Left Side: Main Hero Content */}
-        <div className="ml-24 flex flex-col items-start gap-8 mt-20">
+        <div className="flex flex-col items-start gap-8 mt-20 w-full md:w-1/2">
           {/* Google Rating Section */}
           <div className="flex items-center justify-center gap-1 text-xl font-medium">
             <span className="text-amber-500">
@@ -24,10 +24,10 @@ export const HeroPage = () => {
           </div>
 
           {/* Headline and Description */}
-          <h3 className="font-medium text-4xl w-[500px]">
+          <h3 className="font-medium text-4xl md:w-[500px]">
             Your Trusted Partner for Compliance Business Needs
           </h3>
-          <p className="w-[600px] text-lg">
+          <p className="w-full md:w-[600px] text-lg">
             An online business compliance platform that helps entrepreneurs and
             other individuals with various
             <strong> registrations</strong>, <strong>tax filings</strong>, and
@@ -35,7 +35,7 @@ export const HeroPage = () => {
           </p>
 
           {/* Stats Section */}
-          <div className="flex gap-8">
+          <div className="flex flex-row md:flex-row gap-8">
             <StatCard
               icon={<MdGridView className="text-5xl" />}
               value="4.5+"
@@ -54,7 +54,7 @@ export const HeroPage = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-5">
+          <div className="flex flex-row md:flex-row gap-5">
             <button className="bg-sky-700/90 text-white p-2 px-6 hover:text-black cursor-pointer hover:bg-sky-500 rounded-md">
               Talk to an Expert
             </button>
@@ -66,11 +66,11 @@ export const HeroPage = () => {
         </div>
 
         {/* Right Side: Services Menu */}
-        <div className="flex flex-col gap-4 ml-auto mt-12">
+        <div className="hidden md:block  gap-4 ml-auto mt-12">
           <h2 className="bg-white p-3 px-6 rounded-l-2xl hover:bg-orange-400 hover:text-white text-black">
             Annual Compliance
           </h2>
-          <h2 className="bg-white p-3 px-6 rounded-l-2xl text-black hover:bg-orange-400 hover:text-white">
+          <h2 className="bg-white p-3 px-6  rounded-l-2xl text-black hover:bg-orange-400 hover:text-white">
             Payroll Service
           </h2>
           <h2 className="bg-white p-3 px-6 rounded-l-2xl text-black hover:bg-orange-400 hover:text-white">
@@ -86,7 +86,7 @@ export const HeroPage = () => {
 };
 
 const StatCard = ({ icon, value, label }) => (
-  <div className="flex items-center gap-2.5">
+  <div className="flex items-center gap-2.5 w-full md:w-auto">
     {icon}
     <div className="flex flex-col">
       <strong>{value}</strong>
