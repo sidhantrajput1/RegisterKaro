@@ -1,6 +1,6 @@
 // import Oracle from './../assets/CompanyImg/Oracle_logo.png';
-import Oracle from "./../assets/img/udemy.png";
-// import Segment from './../assets/CompanyImg/segmentLogo.png';
+// import Oracle from "./../assets/img/udemy.png";
+import Oracle from './../assets/CompanyImg/segmentLogo.png';
 // import Monday from './../assets/CompanyImg/MondayLogo.png';
 // import Sumsung from './../assets/CompanyImg/SumsungLogo.png';
 
