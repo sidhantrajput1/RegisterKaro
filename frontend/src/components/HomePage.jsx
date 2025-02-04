@@ -13,8 +13,8 @@ import SubscribeBox from "./SubscribeBox"
 import VideoIntroduction from "./VideoIntroduction"
 import Accordian from "./Accordian"
 import HappyClients from "./HappyClients"
-// import Carousel from "./Carousel"
-// import Corousel from "./Corousel"
+import Corousel from "./Corousel"
+import Test from "./test"
 
 function HomePage() {
     return (
@@ -28,15 +28,14 @@ function HomePage() {
             <HappyClients />
             <Application />
             <DigitalTransformation />
-            {/* <Corousel /> */}
             <Accordian/>
             <ManageApp />
             <Connection />
             <SubscribeBox />
             <Company />
             <Footer />
-
-            {/* <Carousel/> */}
+            <Corousel/>
+            <Test/>
         </div>
     )
 }

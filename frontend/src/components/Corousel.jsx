@@ -1,6 +1,7 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 
-const testimonials = [
+const Data = [
     {
         quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         name: "Chris",
@@ -22,77 +23,78 @@ const testimonials = [
         image: "https://randomuser.me/api/portraits/men/50.jpg",
         rating: 4,
     },
+    {
+        quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        name: "Alex",
+        title: "CTO, TechCorp, USA",
+        image: "https://randomuser.me/api/portraits/men/47.jpg",
+        rating: 5,
+    },
+    {
+        quote: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        name: "Taylor",
+        title: "Manager, Global Solutions, USA",
+        image: "https://randomuser.me/api/portraits/men/50.jpg",
+        rating: 4,
+    },
 ];
 
-function Carousel() {
-    const [currentSlide, setCurrentSlide] = useState(0);
 
-    const handlePrev = () => {
-        const prevSlide = currentSlide === 0 ? testimonials.length - 1 : currentSlide - 1;
-        setCurrentSlide(prevSlide);
+function Corousel() {
+    const [current, setCurrent] = useState(3);
+
+    const previous = () => {
+        const isFirstSlide = current === 0;
+        const newIndx = isFirstSlide ? Data.length - 1 : current - 1;
+        setCurrent(newIndx);
     };
 
-    const handleNext = () => {
-        const nextSlide = currentSlide === testimonials.length - 1 ? 0 : currentSlide + 1;
-        setCurrentSlide(nextSlide);
+    const next = () => {
+        const isLastSlide = current === Data.length - 1;
+        const newIndx = isLastSlide ? 0 : current + 1;
+        setCurrent(newIndx);
     };
+
+    // Display only the current testimonial
+    const { image, name, title, quote, rating } = Data[current];
 
     return (
-        <div className="carousel-container bg-blue-900 py-8">
-            <h2 className="text-center text-white text-2xl mb-4">What people say about us</h2>
-            <div className="carousel flex items-center justify-center">
-                <button onClick={handlePrev} className="carousel-button p-2 rounded-full bg-white shadow-md text-blue-900 mr-4">{"<"}</button>
-
-                <div className="carousel-slides relative w-96 h-60">
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className={`slide absolute inset-0 transition-opacity duration-500 ease-in-out ${
-                                index === currentSlide ? 'opacity-100' : 'opacity-0'
-                            }`}
-                        >
-                            <div className="bg-white rounded-xl shadow-lg p-4">
-                                <div className="flex items-start">
-                                    <span className="text-6xl text-yellow-400">“</span>
-                                    <p className="ml-2">{testimonial.quote}</p>
-                                </div>
-                                <div className="flex items-center mt-4">
-                                    <img
-                                        src={testimonial.image}
-                                        alt={testimonial.name}
-                                        className="w-10 h-10 rounded-full"
-                                    />
-                                    <div className="ml-2">
-                                        <h3 className="text-sm font-bold">{testimonial.name}</h3>
-                                        <p className="text-xs">{testimonial.title}</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center mt-2">
-                                    {[...Array(5)].map((_, i) => (
-                                        <span key={i} className={`text-yellow-400 text-xl ${i < Math.floor(testimonial.rating) ? 'fas fa-star' : 'far fa-star'}`}></span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <button onClick={handleNext} className="carousel-button p-2 rounded-full bg-white shadow-md text-blue-900 ml-4">{">"}</button>
+        <div className="max-w-7xl mx-auto mt-4">
+            <div className="flex justify-between">
+                <button onClick={previous}>&lt;</button>
+                <button onClick={next}>&gt;</button>
             </div>
-
-            <div className="flex justify-center mt-4">
-                {testimonials.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`cursor-pointer w-3 h-3 mx-1 rounded-full ${
-                            currentSlide === index ? 'bg-yellow-400' : 'bg-gray-300'
-                        }`}
-                        onClick={() => setCurrentSlide(index)}
-                    ></span>
-                ))}
+            <div className="flex justify-center overflow-x-hidden scroll-smooth px-4">
+                {/* Display the current testimonial */}
+                <Testomonial
+                    img={image}
+                    name={name}
+                    title={title}
+                    quote={quote}
+                    rating={rating}
+                />
             </div>
         </div>
     );
 }
 
-export default Carousel;
+
+const Testomonial = ({ img, name, title, quote, rating }) => {
+    return (
+        <div className="bg-white rounded-xl shadow-lg p-6 w-80 flex-shrink-0 text-center border border-gray-200">
+            <img
+                className="w-24 h-24 rounded-full mx-auto mb-4"
+                src={img}
+                alt={name}
+            />
+            <h3 className="text-xl font-bold">{name}</h3>
+            <p className="text-gray-500">{title}</p>
+            <p className="text-gray-700 italic my-4">{quote}</p>
+            <div className="flex items-center justify-center space-x-1 text-sky-400">
+                {rating}
+            </div>
+        </div>
+    );
+}
+
+export default Corousel;
