@@ -106,7 +106,7 @@ function Corousel() {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-[500px]  flex-shrink-0"
+                  className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-[450px] h-[270px] flex-shrink-0"
                 >
                   <Carousel
                     img={img}

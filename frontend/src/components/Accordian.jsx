@@ -42,7 +42,7 @@ function DropDown({ question, answer }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="my-6 mx-auto max-w-7xl">
+    <div className="my-6 mx-auto max-w-7xl px-3">
       <div
         className="my-3 p-6 bg-white rounded-lg shadow-sm relative"
         onClick={() => setIsActive(!isActive)}

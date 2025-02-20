@@ -14,6 +14,7 @@ import VideoIntroduction from "./VideoIntroduction"
 import Accordian from "./Accordian"
 import HappyClients from "./HappyClients"
 import Corousel from "./Corousel"
+import Contact from "./Shared/Contact"
 
 function HomePage() {
     return (
@@ -34,6 +35,7 @@ function HomePage() {
             <SubscribeBox />
             <Company />
             <Footer />
+            <Contact />
         </div>
     )
 }

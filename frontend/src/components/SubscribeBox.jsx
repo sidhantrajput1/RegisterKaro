@@ -6,7 +6,7 @@ function SubscribeBox() {
         <h3 className="text-2xl sm:text-4xl font-medium text-white text-center">
           Welcome to your new digital reality. Now.
         </h3>
-        <div className="flex flex-col sm:flex-row w-full max-w-[450px]">
+        <div className="flex flex-col gap-3 sm:flex-row w-full max-w-[450px]">
           <input
             type="email"
             className="bg-white py-2 px-2 w-full sm:w-[300px] md:w-[450px] outline-none rounded-t sm:rounded-l sm:rounded-t-none"
